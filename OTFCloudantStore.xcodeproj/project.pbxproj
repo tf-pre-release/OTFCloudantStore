@@ -1,0 +1,2837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1452D72A267768ED00DEEC14 /* OTFQuantityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452D729267768ED00DEEC14 /* OTFQuantityTests.swift */; };
+		1452D72F2677697900DEEC14 /* OTFCloudantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452D72E2677697900DEEC14 /* OTFCloudantTests.swift */; };
+		1457C9A0269EAE7E009E2284 /* OTFCategorySampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457C99F269EAE7E009E2284 /* OTFCategorySampleTests.swift */; };
+		147F0AF626946A3D00DCA85A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1452D715267756F800DEEC14 /* Date+Extension.swift */; };
+		14AF8DDE2657744E003513DF /* OTFCloudantStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF8DDD2657744E003513DF /* OTFCloudantStoreTests.swift */; };
+		14AF8DE02657744E003513DF /* OTFCloudantStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23A0192450B1FD008BEDD7 /* OTFCloudantStore.framework */; };
+		14AF8DFC26577486003513DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF8DFB26577486003513DF /* AppDelegate.swift */; };
+		14AF8DFE26577486003513DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF8DFD26577486003513DF /* SceneDelegate.swift */; };
+		14AF8E0026577486003513DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF8DFF26577486003513DF /* ViewController.swift */; };
+		14AF8E0326577486003513DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AF8E0126577486003513DF /* Main.storyboard */; };
+		14AF8E0526577486003513DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14AF8E0426577486003513DF /* Assets.xcassets */; };
+		14AF8E0826577486003513DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AF8E0626577486003513DF /* LaunchScreen.storyboard */; };
+		14AF8E7626577ACD003513DF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143072A1264D24CA00E2AA75 /* HealthKit.framework */; };
+		14CDA45C2668E39C0064B502 /* OTFCloudantSSETest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDA45B2668E39C0064B502 /* OTFCloudantSSETest.swift */; };
+		14D4C6012669DD7700AD1219 /* CloudantSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4C6002669DD7700AD1219 /* CloudantSync.swift */; };
+		14D4C6092669DFA400AD1219 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4C6082669DFA400AD1219 /* URLRequest+Extension.swift */; };
+		5A425E842628587900B8F656 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A425E832628587900B8F656 /* README.md */; };
+		84DE983D438741FEEC0344BF /* Pods_OTFCloudantStore_OTFCloudantStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DBF7741879C1132402AE86 /* Pods_OTFCloudantStore_OTFCloudantStoreTests.framework */; };
+		CB022A8B4485350756CB0E04 /* Pods_OTFCloudantStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6C958543CDC68AC6323A36 /* Pods_OTFCloudantStore.framework */; };
+		CEE31DC22600C60E009168B4 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D902600C60D009168B4 /* Decoder.swift */; };
+		CEE31DC32600C60E009168B4 /* TheraForgeISO8601Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D912600C60D009168B4 /* TheraForgeISO8601Formatter.swift */; };
+		CEE31DC42600C60E009168B4 /* DecodingError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D922600C60D009168B4 /* DecodingError+Extension.swift */; };
+		CEE31DC52600C60E009168B4 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D932600C60D009168B4 /* Encoder.swift */; };
+		CEE31DC62600C60E009168B4 /* CloudantDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D942600C60D009168B4 /* CloudantDecoder.swift */; };
+		CEE31DC72600C60E009168B4 /* CloudantEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D952600C60D009168B4 /* CloudantEncoder.swift */; };
+		CEE31DC82600C60E009168B4 /* OCKModels+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D972600C60D009168B4 /* OCKModels+Extension.swift */; };
+		CEE31DC92600C60E009168B4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D982600C60D009168B4 /* String+Extension.swift */; };
+		CEE31DCA2600C60E009168B4 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D992600C60D009168B4 /* Dictionary+Extension.swift */; };
+		CEE31DCB2600C60E009168B4 /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9A2600C60D009168B4 /* Codable+Extension.swift */; };
+		CEE31DCC2600C60E009168B4 /* CDTDocumentRevision+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9B2600C60D009168B4 /* CDTDocumentRevision+Extension.swift */; };
+		CEE31DCD2600C60E009168B4 /* CareKit+StoreManagerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9C2600C60D009168B4 /* CareKit+StoreManagerKey.swift */; };
+		CEE31DCE2600C60E009168B4 /* DataStoreName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9D2600C60D009168B4 /* DataStoreName.swift */; };
+		CEE31DCF2600C60E009168B4 /* OTFCloudantORKResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA12600C60D009168B4 /* OTFCloudantORKResult.swift */; };
+		CEE31DD02600C60E009168B4 /* OTFCloudantORKAmslerGridResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA22600C60D009168B4 /* OTFCloudantORKAmslerGridResult.swift */; };
+		CEE31DD12600C60E009168B4 /* OTFCloudantHKWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA42600C60D009168B4 /* OTFCloudantHKWorkout.swift */; };
+		CEE31DD22600C60E009168B4 /* OTFCloudantHKDocumentSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA52600C60D009168B4 /* OTFCloudantHKDocumentSample.swift */; };
+		CEE31DD32600C60E009168B4 /* OTFCloudantHKStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA62600C60D009168B4 /* OTFCloudantHKStatistics.swift */; };
+		CEE31DD42600C60E009168B4 /* OTFCloudantHKCorrelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA72600C60D009168B4 /* OTFCloudantHKCorrelation.swift */; };
+		CEE31DD52600C60E009168B4 /* OTFParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA82600C60D009168B4 /* OTFParsingHelper.swift */; };
+		CEE31DD62600C60E009168B4 /* OTFCloudantHKSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DA92600C60D009168B4 /* OTFCloudantHKSample.swift */; };
+		CEE31DD72600C60E009168B4 /* OTFCloudantHKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAA2600C60D009168B4 /* OTFCloudantHKUnit.swift */; };
+		CEE31DD82600C60E009168B4 /* OTFCloudantHKCharacteristicObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAB2600C60D009168B4 /* OTFCloudantHKCharacteristicObjects.swift */; };
+		CEE31DD92600C60E009168B4 /* OTFCloudantHKSeriesSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAC2600C60D009168B4 /* OTFCloudantHKSeriesSample.swift */; };
+		CEE31DDA2600C60E009168B4 /* OTFCloudantHKSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAD2600C60D009168B4 /* OTFCloudantHKSource.swift */; };
+		CEE31DDB2600C60E009168B4 /* OTFCloudantHKQuantitySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAE2600C60E009168B4 /* OTFCloudantHKQuantitySample.swift */; };
+		CEE31DDC2600C60E009168B4 /* OTFCloudantHKActivitySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DAF2600C60E009168B4 /* OTFCloudantHKActivitySummary.swift */; };
+		CEE31DDD2600C60E009168B4 /* OTFCloudantSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB02600C60E009168B4 /* OTFCloudantSample.swift */; };
+		CEE31DDE2600C60E009168B4 /* OTFCloudantHKObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB12600C60E009168B4 /* OTFCloudantHKObject.swift */; };
+		CEE31DDF2600C60E009168B4 /* OTFCloudantHKAudiogramSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB22600C60E009168B4 /* OTFCloudantHKAudiogramSample.swift */; };
+		CEE31DE02600C60E009168B4 /* OTFCloudantHKClinicalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB32600C60E009168B4 /* OTFCloudantHKClinicalRecord.swift */; };
+		CEE31DE12600C60E009168B4 /* OTFHealthKitSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB42600C60E009168B4 /* OTFHealthKitSynchronizer.swift */; };
+		CEE31DE22600C60E009168B4 /* OTFCloudantStore+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB62600C60E009168B4 /* OTFCloudantStore+Tasks.swift */; };
+		CEE31DE32600C60E009168B4 /* OTFCloudantStore+Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB72600C60E009168B4 /* OTFCloudantStore+Contacts.swift */; };
+		CEE31DE42600C60E009168B4 /* OTFCloudantStore+CarePlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB82600C60E009168B4 /* OTFCloudantStore+CarePlans.swift */; };
+		CEE31DE52600C60E009168B4 /* OTFCloudantStore+Patients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB92600C60E009168B4 /* OTFCloudantStore+Patients.swift */; };
+		CEE31DE62600C60E009168B4 /* OTFCloudantStore+Outcomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBA2600C60E009168B4 /* OTFCloudantStore+Outcomes.swift */; };
+		CEE31DE72600C60E009168B4 /* OTFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBB2600C60E009168B4 /* OTFError.swift */; };
+		CEE31DE82600C60E009168B4 /* OTFCloudantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBC2600C60E009168B4 /* OTFCloudantStore.swift */; };
+		CEE31DE92600C60E009168B4 /* OTFQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBD2600C60E009168B4 /* OTFQuery.swift */; };
+		CEE31DEA2600C60E009168B4 /* OTFNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBE2600C60E009168B4 /* OTFNetwork.swift */; };
+		CEE31DEB2600C60E009168B4 /* OTFCloudantQueryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DBF2600C60E009168B4 /* OTFCloudantQueryComponent.swift */; };
+		CEE31DEC2600C60E009168B4 /* OTFCloudantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DC02600C60E009168B4 /* OTFCloudantQuery.swift */; };
+		CEE31DED2600C60E009168B4 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DC12600C60E009168B4 /* StoreService.swift */; };
+		FA23A01E2450B1FD008BEDD7 /* OCKCloudantStore.h in Headers */ = {isa = PBXBuildFile; fileRef = FA23A01C2450B1FD008BEDD7 /* OCKCloudantStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA23A04D2450B28C008BEDD7 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = FA23A03A2450B28C008BEDD7 /* .gitkeep */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14AF8DE12657744E003513DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA23A0102450B1FD008BEDD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA23A0182450B1FD008BEDD7;
+			remoteInfo = OTFCloudantStore;
+		};
+		14AF8E4626577498003513DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA23A0102450B1FD008BEDD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14AF8DF826577486003513DF;
+			remoteInfo = App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11D6A8FEC06FF140E6855387 /* Pods-OTFCloudantStore.care.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.care.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.care.xcconfig"; sourceTree = "<group>"; };
+		143072A1264D24CA00E2AA75 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1452D715267756F800DEEC14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		1452D729267768ED00DEEC14 /* OTFQuantityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFQuantityTests.swift; sourceTree = "<group>"; };
+		1452D72E2677697900DEEC14 /* OTFCloudantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFCloudantTests.swift; sourceTree = "<group>"; };
+		1457C99F269EAE7E009E2284 /* OTFCategorySampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFCategorySampleTests.swift; sourceTree = "<group>"; };
+		14AF8DDB2657744E003513DF /* OTFCloudantStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTFCloudantStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AF8DDD2657744E003513DF /* OTFCloudantStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFCloudantStoreTests.swift; sourceTree = "<group>"; };
+		14AF8DDF2657744E003513DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AF8DF926577486003513DF /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AF8DFB26577486003513DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14AF8DFD26577486003513DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14AF8DFF26577486003513DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14AF8E0226577486003513DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14AF8E0426577486003513DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14AF8E0726577486003513DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14AF8E0926577486003513DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AF8E7526577ACC003513DF /* AppCareHealth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCareHealth.entitlements; sourceTree = "<group>"; };
+		14CDA45B2668E39C0064B502 /* OTFCloudantSSETest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFCloudantSSETest.swift; sourceTree = "<group>"; };
+		14D4C6002669DD7700AD1219 /* CloudantSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudantSync.swift; sourceTree = "<group>"; };
+		14D4C6082669DFA400AD1219 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		19B3E628DBF0C2175010B527 /* Pods-OTFCloudantStore.carehealth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.carehealth.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.carehealth.xcconfig"; sourceTree = "<group>"; };
+		2665246282F941EA9F4F0A68 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth.xcconfig"; sourceTree = "<group>"; };
+		289F6C2C2CBFD9F080ACF2D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.care.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.care.xcconfig"; sourceTree = "<group>"; };
+		2A39BBDE96F68B52864E672F /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant_debug.xcconfig"; sourceTree = "<group>"; };
+		4FD500C0451247ED2FE804BF /* Pods-OTFCloudantStore-OTFCloudantStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51A4322F3FFE539F1B44A8D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth_debug.xcconfig"; sourceTree = "<group>"; };
+		5A425E832628587900B8F656 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7F6C958543CDC68AC6323A36 /* Pods_OTFCloudantStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTFCloudantStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8073AD5C60C0830BEC24DDB9 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.care_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.care_debug.xcconfig"; sourceTree = "<group>"; };
+		81DBF7741879C1132402AE86 /* Pods_OTFCloudantStore_OTFCloudantStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTFCloudantStore_OTFCloudantStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E699716786F122C5FF8799 /* Pods-OTFCloudantStore.health_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.health_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.health_debug.xcconfig"; sourceTree = "<group>"; };
+		8695EE7434C7C6DB211005C4 /* Pods-OTFCloudantStore.health.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.health.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.health.xcconfig"; sourceTree = "<group>"; };
+		A0C8E501DA261860ECCCE1B9 /* Pods-OTFCloudantStore.cloudant_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.cloudant_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.cloudant_debug.xcconfig"; sourceTree = "<group>"; };
+		C601DC7E494497C8EFB969A0 /* Pods-OTFCloudantStore.carehealth_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.carehealth_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.carehealth_debug.xcconfig"; sourceTree = "<group>"; };
+		CB1C1AE6FEF1493CF03FD026 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.health.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.health.xcconfig"; sourceTree = "<group>"; };
+		CE37BC602C85B631F4FE38FF /* Pods-OTFCloudantStore.cloudant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.cloudant.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.cloudant.xcconfig"; sourceTree = "<group>"; };
+		CE658383265B5F2F0092BCAE /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		CEE31D902600C60D009168B4 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		CEE31D912600C60D009168B4 /* TheraForgeISO8601Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheraForgeISO8601Formatter.swift; sourceTree = "<group>"; };
+		CEE31D922600C60D009168B4 /* DecodingError+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecodingError+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D932600C60D009168B4 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		CEE31D942600C60D009168B4 /* CloudantDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudantDecoder.swift; sourceTree = "<group>"; };
+		CEE31D952600C60D009168B4 /* CloudantEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudantEncoder.swift; sourceTree = "<group>"; };
+		CEE31D972600C60D009168B4 /* OCKModels+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OCKModels+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D982600C60D009168B4 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D992600C60D009168B4 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D9A2600C60D009168B4 /* Codable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D9B2600C60D009168B4 /* CDTDocumentRevision+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDTDocumentRevision+Extension.swift"; sourceTree = "<group>"; };
+		CEE31D9C2600C60D009168B4 /* CareKit+StoreManagerKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CareKit+StoreManagerKey.swift"; sourceTree = "<group>"; };
+		CEE31D9D2600C60D009168B4 /* DataStoreName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreName.swift; sourceTree = "<group>"; };
+		CEE31DA12600C60D009168B4 /* OTFCloudantORKResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantORKResult.swift; sourceTree = "<group>"; };
+		CEE31DA22600C60D009168B4 /* OTFCloudantORKAmslerGridResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantORKAmslerGridResult.swift; sourceTree = "<group>"; };
+		CEE31DA42600C60D009168B4 /* OTFCloudantHKWorkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKWorkout.swift; sourceTree = "<group>"; };
+		CEE31DA52600C60D009168B4 /* OTFCloudantHKDocumentSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKDocumentSample.swift; sourceTree = "<group>"; };
+		CEE31DA62600C60D009168B4 /* OTFCloudantHKStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKStatistics.swift; sourceTree = "<group>"; };
+		CEE31DA72600C60D009168B4 /* OTFCloudantHKCorrelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKCorrelation.swift; sourceTree = "<group>"; };
+		CEE31DA82600C60D009168B4 /* OTFParsingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFParsingHelper.swift; sourceTree = "<group>"; };
+		CEE31DA92600C60D009168B4 /* OTFCloudantHKSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKSample.swift; sourceTree = "<group>"; };
+		CEE31DAA2600C60D009168B4 /* OTFCloudantHKUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKUnit.swift; sourceTree = "<group>"; };
+		CEE31DAB2600C60D009168B4 /* OTFCloudantHKCharacteristicObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKCharacteristicObjects.swift; sourceTree = "<group>"; };
+		CEE31DAC2600C60D009168B4 /* OTFCloudantHKSeriesSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKSeriesSample.swift; sourceTree = "<group>"; };
+		CEE31DAD2600C60D009168B4 /* OTFCloudantHKSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKSource.swift; sourceTree = "<group>"; };
+		CEE31DAE2600C60E009168B4 /* OTFCloudantHKQuantitySample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKQuantitySample.swift; sourceTree = "<group>"; };
+		CEE31DAF2600C60E009168B4 /* OTFCloudantHKActivitySummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKActivitySummary.swift; sourceTree = "<group>"; };
+		CEE31DB02600C60E009168B4 /* OTFCloudantSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantSample.swift; sourceTree = "<group>"; };
+		CEE31DB12600C60E009168B4 /* OTFCloudantHKObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKObject.swift; sourceTree = "<group>"; };
+		CEE31DB22600C60E009168B4 /* OTFCloudantHKAudiogramSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKAudiogramSample.swift; sourceTree = "<group>"; };
+		CEE31DB32600C60E009168B4 /* OTFCloudantHKClinicalRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantHKClinicalRecord.swift; sourceTree = "<group>"; };
+		CEE31DB42600C60E009168B4 /* OTFHealthKitSynchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFHealthKitSynchronizer.swift; sourceTree = "<group>"; };
+		CEE31DB62600C60E009168B4 /* OTFCloudantStore+Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTFCloudantStore+Tasks.swift"; sourceTree = "<group>"; };
+		CEE31DB72600C60E009168B4 /* OTFCloudantStore+Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTFCloudantStore+Contacts.swift"; sourceTree = "<group>"; };
+		CEE31DB82600C60E009168B4 /* OTFCloudantStore+CarePlans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTFCloudantStore+CarePlans.swift"; sourceTree = "<group>"; };
+		CEE31DB92600C60E009168B4 /* OTFCloudantStore+Patients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTFCloudantStore+Patients.swift"; sourceTree = "<group>"; };
+		CEE31DBA2600C60E009168B4 /* OTFCloudantStore+Outcomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTFCloudantStore+Outcomes.swift"; sourceTree = "<group>"; };
+		CEE31DBB2600C60E009168B4 /* OTFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFError.swift; sourceTree = "<group>"; };
+		CEE31DBC2600C60E009168B4 /* OTFCloudantStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantStore.swift; sourceTree = "<group>"; };
+		CEE31DBD2600C60E009168B4 /* OTFQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFQuery.swift; sourceTree = "<group>"; };
+		CEE31DBE2600C60E009168B4 /* OTFNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFNetwork.swift; sourceTree = "<group>"; };
+		CEE31DBF2600C60E009168B4 /* OTFCloudantQueryComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantQueryComponent.swift; sourceTree = "<group>"; };
+		CEE31DC02600C60E009168B4 /* OTFCloudantQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFCloudantQuery.swift; sourceTree = "<group>"; };
+		CEE31DC12600C60E009168B4 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		E9D4817DDB43963241FEBB36 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant.xcconfig"; sourceTree = "<group>"; };
+		EC92555F3AC82B63D1CDCBCD /* Pods-OTFCloudantStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.debug.xcconfig"; sourceTree = "<group>"; };
+		EE70A89DDCB225BA359A8CC3 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore-OTFCloudantStoreTests.health_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests.health_debug.xcconfig"; sourceTree = "<group>"; };
+		F3F15C85203940C6AECB43C5 /* Pods-OTFCloudantStore.care_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudantStore.care_debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudantStore/Pods-OTFCloudantStore.care_debug.xcconfig"; sourceTree = "<group>"; };
+		FA23A0192450B1FD008BEDD7 /* OTFCloudantStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OTFCloudantStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA23A01C2450B1FD008BEDD7 /* OCKCloudantStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCKCloudantStore.h; sourceTree = "<group>"; };
+		FA23A01D2450B1FD008BEDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA23A03A2450B28C008BEDD7 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14AF8DD82657744E003513DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AF8DE02657744E003513DF /* OTFCloudantStore.framework in Frameworks */,
+				84DE983D438741FEEC0344BF /* Pods_OTFCloudantStore_OTFCloudantStoreTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AF8DF626577486003513DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AF8E7626577ACD003513DF /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA23A0162450B1FD008BEDD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB022A8B4485350756CB0E04 /* Pods_OTFCloudantStore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AF8DDC2657744E003513DF /* OTFCloudantStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				1452D72E2677697900DEEC14 /* OTFCloudantTests.swift */,
+				14AF8DDD2657744E003513DF /* OTFCloudantStoreTests.swift */,
+				1452D729267768ED00DEEC14 /* OTFQuantityTests.swift */,
+				1457C99F269EAE7E009E2284 /* OTFCategorySampleTests.swift */,
+				14CDA45B2668E39C0064B502 /* OTFCloudantSSETest.swift */,
+				14D4C6002669DD7700AD1219 /* CloudantSync.swift */,
+				14D4C6082669DFA400AD1219 /* URLRequest+Extension.swift */,
+				1452D715267756F800DEEC14 /* Date+Extension.swift */,
+				14AF8DDF2657744E003513DF /* Info.plist */,
+			);
+			path = OTFCloudantStoreTests;
+			sourceTree = "<group>";
+		};
+		14AF8DFA26577486003513DF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE658383265B5F2F0092BCAE /* App.entitlements */,
+				14AF8E7526577ACC003513DF /* AppCareHealth.entitlements */,
+				14AF8DFB26577486003513DF /* AppDelegate.swift */,
+				14AF8DFD26577486003513DF /* SceneDelegate.swift */,
+				14AF8DFF26577486003513DF /* ViewController.swift */,
+				14AF8E0126577486003513DF /* Main.storyboard */,
+				14AF8E0426577486003513DF /* Assets.xcassets */,
+				14AF8E0626577486003513DF /* LaunchScreen.storyboard */,
+				14AF8E0926577486003513DF /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7E4F0B44800158CC49A14B4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143072A1264D24CA00E2AA75 /* HealthKit.framework */,
+				7F6C958543CDC68AC6323A36 /* Pods_OTFCloudantStore.framework */,
+				81DBF7741879C1132402AE86 /* Pods_OTFCloudantStore_OTFCloudantStoreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD276BDD8D8C49F750767DB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC92555F3AC82B63D1CDCBCD /* Pods-OTFCloudantStore.debug.xcconfig */,
+				A0C8E501DA261860ECCCE1B9 /* Pods-OTFCloudantStore.cloudant_debug.xcconfig */,
+				83E699716786F122C5FF8799 /* Pods-OTFCloudantStore.health_debug.xcconfig */,
+				C601DC7E494497C8EFB969A0 /* Pods-OTFCloudantStore.carehealth_debug.xcconfig */,
+				F3F15C85203940C6AECB43C5 /* Pods-OTFCloudantStore.care_debug.xcconfig */,
+				8695EE7434C7C6DB211005C4 /* Pods-OTFCloudantStore.health.xcconfig */,
+				CE37BC602C85B631F4FE38FF /* Pods-OTFCloudantStore.cloudant.xcconfig */,
+				19B3E628DBF0C2175010B527 /* Pods-OTFCloudantStore.carehealth.xcconfig */,
+				11D6A8FEC06FF140E6855387 /* Pods-OTFCloudantStore.care.xcconfig */,
+				4FD500C0451247ED2FE804BF /* Pods-OTFCloudantStore-OTFCloudantStoreTests.debug.xcconfig */,
+				2A39BBDE96F68B52864E672F /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant_debug.xcconfig */,
+				EE70A89DDCB225BA359A8CC3 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health_debug.xcconfig */,
+				51A4322F3FFE539F1B44A8D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth_debug.xcconfig */,
+				8073AD5C60C0830BEC24DDB9 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care_debug.xcconfig */,
+				CB1C1AE6FEF1493CF03FD026 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health.xcconfig */,
+				E9D4817DDB43963241FEBB36 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant.xcconfig */,
+				2665246282F941EA9F4F0A68 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth.xcconfig */,
+				289F6C2C2CBFD9F080ACF2D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEE31D8E2600C60D009168B4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D8F2600C60D009168B4 /* Codable */,
+				CEE31D962600C60D009168B4 /* Extensions */,
+				CEE31D9D2600C60D009168B4 /* DataStoreName.swift */,
+				CEE31D9E2600C60D009168B4 /* Store */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEE31D8F2600C60D009168B4 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D902600C60D009168B4 /* Decoder.swift */,
+				CEE31D912600C60D009168B4 /* TheraForgeISO8601Formatter.swift */,
+				CEE31D922600C60D009168B4 /* DecodingError+Extension.swift */,
+				CEE31D932600C60D009168B4 /* Encoder.swift */,
+				CEE31D942600C60D009168B4 /* CloudantDecoder.swift */,
+				CEE31D952600C60D009168B4 /* CloudantEncoder.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		CEE31D962600C60D009168B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D972600C60D009168B4 /* OCKModels+Extension.swift */,
+				CEE31D982600C60D009168B4 /* String+Extension.swift */,
+				CEE31D992600C60D009168B4 /* Dictionary+Extension.swift */,
+				CEE31D9A2600C60D009168B4 /* Codable+Extension.swift */,
+				CEE31D9B2600C60D009168B4 /* CDTDocumentRevision+Extension.swift */,
+				CEE31D9C2600C60D009168B4 /* CareKit+StoreManagerKey.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEE31D9E2600C60D009168B4 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D9F2600C60D009168B4 /* Apple */,
+				CEE31DBB2600C60E009168B4 /* OTFError.swift */,
+				CEE31DBC2600C60E009168B4 /* OTFCloudantStore.swift */,
+				CEE31DBD2600C60E009168B4 /* OTFQuery.swift */,
+				CEE31DBE2600C60E009168B4 /* OTFNetwork.swift */,
+				CEE31DBF2600C60E009168B4 /* OTFCloudantQueryComponent.swift */,
+				CEE31DC02600C60E009168B4 /* OTFCloudantQuery.swift */,
+				CEE31DC12600C60E009168B4 /* StoreService.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		CEE31D9F2600C60D009168B4 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31DA02600C60D009168B4 /* ResearchKit */,
+				CEE31DA32600C60D009168B4 /* HealthKit */,
+				CEE31DB52600C60E009168B4 /* CareKit */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+		CEE31DA02600C60D009168B4 /* ResearchKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31DA12600C60D009168B4 /* OTFCloudantORKResult.swift */,
+				CEE31DA22600C60D009168B4 /* OTFCloudantORKAmslerGridResult.swift */,
+			);
+			path = ResearchKit;
+			sourceTree = "<group>";
+		};
+		CEE31DA32600C60D009168B4 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31DA42600C60D009168B4 /* OTFCloudantHKWorkout.swift */,
+				CEE31DA52600C60D009168B4 /* OTFCloudantHKDocumentSample.swift */,
+				CEE31DA62600C60D009168B4 /* OTFCloudantHKStatistics.swift */,
+				CEE31DA72600C60D009168B4 /* OTFCloudantHKCorrelation.swift */,
+				CEE31DA82600C60D009168B4 /* OTFParsingHelper.swift */,
+				CEE31DA92600C60D009168B4 /* OTFCloudantHKSample.swift */,
+				CEE31DAA2600C60D009168B4 /* OTFCloudantHKUnit.swift */,
+				CEE31DAB2600C60D009168B4 /* OTFCloudantHKCharacteristicObjects.swift */,
+				CEE31DAC2600C60D009168B4 /* OTFCloudantHKSeriesSample.swift */,
+				CEE31DAD2600C60D009168B4 /* OTFCloudantHKSource.swift */,
+				CEE31DAE2600C60E009168B4 /* OTFCloudantHKQuantitySample.swift */,
+				CEE31DAF2600C60E009168B4 /* OTFCloudantHKActivitySummary.swift */,
+				CEE31DB02600C60E009168B4 /* OTFCloudantSample.swift */,
+				CEE31DB12600C60E009168B4 /* OTFCloudantHKObject.swift */,
+				CEE31DB22600C60E009168B4 /* OTFCloudantHKAudiogramSample.swift */,
+				CEE31DB32600C60E009168B4 /* OTFCloudantHKClinicalRecord.swift */,
+				CEE31DB42600C60E009168B4 /* OTFHealthKitSynchronizer.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		CEE31DB52600C60E009168B4 /* CareKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31DB62600C60E009168B4 /* OTFCloudantStore+Tasks.swift */,
+				CEE31DB72600C60E009168B4 /* OTFCloudantStore+Contacts.swift */,
+				CEE31DB82600C60E009168B4 /* OTFCloudantStore+CarePlans.swift */,
+				CEE31DB92600C60E009168B4 /* OTFCloudantStore+Patients.swift */,
+				CEE31DBA2600C60E009168B4 /* OTFCloudantStore+Outcomes.swift */,
+			);
+			path = CareKit;
+			sourceTree = "<group>";
+		};
+		FA23A00F2450B1FD008BEDD7 = {
+			isa = PBXGroup;
+			children = (
+				FA23A01B2450B1FD008BEDD7 /* OTFCloudantStore */,
+				14AF8DDC2657744E003513DF /* OTFCloudantStoreTests */,
+				14AF8DFA26577486003513DF /* App */,
+				FA23A01A2450B1FD008BEDD7 /* Products */,
+				5A425E832628587900B8F656 /* README.md */,
+				CD276BDD8D8C49F750767DB3 /* Pods */,
+				7E4F0B44800158CC49A14B4E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA23A01A2450B1FD008BEDD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA23A0192450B1FD008BEDD7 /* OTFCloudantStore.framework */,
+				14AF8DDB2657744E003513DF /* OTFCloudantStoreTests.xctest */,
+				14AF8DF926577486003513DF /* App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA23A01B2450B1FD008BEDD7 /* OTFCloudantStore */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D8E2600C60D009168B4 /* Classes */,
+				FA23A0392450B28B008BEDD7 /* Assets */,
+				FA23A01C2450B1FD008BEDD7 /* OCKCloudantStore.h */,
+				FA23A01D2450B1FD008BEDD7 /* Info.plist */,
+			);
+			path = OTFCloudantStore;
+			sourceTree = "<group>";
+		};
+		FA23A0392450B28B008BEDD7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FA23A03A2450B28C008BEDD7 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FA23A0142450B1FD008BEDD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA23A01E2450B1FD008BEDD7 /* OCKCloudantStore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14AF8DDA2657744E003513DF /* OTFCloudantStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14AF8DE32657744E003513DF /* Build configuration list for PBXNativeTarget "OTFCloudantStoreTests" */;
+			buildPhases = (
+				09BD372281677C8088EBBD11 /* [CP] Check Pods Manifest.lock */,
+				14AF8DD72657744E003513DF /* Sources */,
+				14AF8DD82657744E003513DF /* Frameworks */,
+				14AF8DD92657744E003513DF /* Resources */,
+				6C3B871F319D227C7217B3E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14AF8DE22657744E003513DF /* PBXTargetDependency */,
+				14AF8E4726577498003513DF /* PBXTargetDependency */,
+			);
+			name = OTFCloudantStoreTests;
+			productName = OTFCloudantStoreTests;
+			productReference = 14AF8DDB2657744E003513DF /* OTFCloudantStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14AF8DF826577486003513DF /* App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14AF8E2026577487003513DF /* Build configuration list for PBXNativeTarget "App" */;
+			buildPhases = (
+				14AF8DF526577486003513DF /* Sources */,
+				14AF8DF626577486003513DF /* Frameworks */,
+				14AF8DF726577486003513DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = App;
+			productName = App;
+			productReference = 14AF8DF926577486003513DF /* App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA23A0182450B1FD008BEDD7 /* OTFCloudantStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA23A0212450B1FD008BEDD7 /* Build configuration list for PBXNativeTarget "OTFCloudantStore" */;
+			buildPhases = (
+				A9CCB7B0720C4F494EED3868 /* [CP] Check Pods Manifest.lock */,
+				FA23A0142450B1FD008BEDD7 /* Headers */,
+				FA23A0152450B1FD008BEDD7 /* Sources */,
+				FA23A0162450B1FD008BEDD7 /* Frameworks */,
+				FA23A0172450B1FD008BEDD7 /* Resources */,
+				14A265A026A1640E00CE30AC /* Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTFCloudantStore;
+			productName = OCKCloudantStore;
+			productReference = FA23A0192450B1FD008BEDD7 /* OTFCloudantStore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA23A0102450B1FD008BEDD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Curly Bracers";
+				TargetAttributes = {
+					14AF8DDA2657744E003513DF = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 14AF8DF826577486003513DF;
+					};
+					14AF8DF826577486003513DF = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					FA23A0182450B1FD008BEDD7 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = FA23A0132450B1FD008BEDD7 /* Build configuration list for PBXProject "OTFCloudantStore" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA23A00F2450B1FD008BEDD7;
+			productRefGroup = FA23A01A2450B1FD008BEDD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14AF8DF826577486003513DF /* App */,
+				FA23A0182450B1FD008BEDD7 /* OTFCloudantStore */,
+				14AF8DDA2657744E003513DF /* OTFCloudantStoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14AF8DD92657744E003513DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AF8DF726577486003513DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AF8E0826577486003513DF /* LaunchScreen.storyboard in Resources */,
+				14AF8E0526577486003513DF /* Assets.xcassets in Resources */,
+				14AF8E0326577486003513DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA23A0172450B1FD008BEDD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A425E842628587900B8F656 /* README.md in Resources */,
+				FA23A04D2450B28C008BEDD7 /* .gitkeep in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09BD372281677C8088EBBD11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTFCloudantStore-OTFCloudantStoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14A265A026A1640E00CE30AC /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		6C3B871F319D227C7217B3E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTFCloudantStore-OTFCloudantStoreTests/Pods-OTFCloudantStore-OTFCloudantStoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9CCB7B0720C4F494EED3868 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTFCloudantStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14AF8DD72657744E003513DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AF8DDE2657744E003513DF /* OTFCloudantStoreTests.swift in Sources */,
+				1452D72A267768ED00DEEC14 /* OTFQuantityTests.swift in Sources */,
+				14D4C6092669DFA400AD1219 /* URLRequest+Extension.swift in Sources */,
+				1457C9A0269EAE7E009E2284 /* OTFCategorySampleTests.swift in Sources */,
+				1452D72F2677697900DEEC14 /* OTFCloudantTests.swift in Sources */,
+				147F0AF626946A3D00DCA85A /* Date+Extension.swift in Sources */,
+				14D4C6012669DD7700AD1219 /* CloudantSync.swift in Sources */,
+				14CDA45C2668E39C0064B502 /* OTFCloudantSSETest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AF8DF526577486003513DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AF8E0026577486003513DF /* ViewController.swift in Sources */,
+				14AF8DFC26577486003513DF /* AppDelegate.swift in Sources */,
+				14AF8DFE26577486003513DF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA23A0152450B1FD008BEDD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE31DC92600C60E009168B4 /* String+Extension.swift in Sources */,
+				CEE31DE52600C60E009168B4 /* OTFCloudantStore+Patients.swift in Sources */,
+				CEE31DD02600C60E009168B4 /* OTFCloudantORKAmslerGridResult.swift in Sources */,
+				CEE31DD72600C60E009168B4 /* OTFCloudantHKUnit.swift in Sources */,
+				CEE31DDD2600C60E009168B4 /* OTFCloudantSample.swift in Sources */,
+				CEE31DDE2600C60E009168B4 /* OTFCloudantHKObject.swift in Sources */,
+				CEE31DC62600C60E009168B4 /* CloudantDecoder.swift in Sources */,
+				CEE31DCC2600C60E009168B4 /* CDTDocumentRevision+Extension.swift in Sources */,
+				CEE31DD92600C60E009168B4 /* OTFCloudantHKSeriesSample.swift in Sources */,
+				CEE31DC52600C60E009168B4 /* Encoder.swift in Sources */,
+				CEE31DC82600C60E009168B4 /* OCKModels+Extension.swift in Sources */,
+				CEE31DD62600C60E009168B4 /* OTFCloudantHKSample.swift in Sources */,
+				CEE31DE72600C60E009168B4 /* OTFError.swift in Sources */,
+				CEE31DD12600C60E009168B4 /* OTFCloudantHKWorkout.swift in Sources */,
+				CEE31DC32600C60E009168B4 /* TheraForgeISO8601Formatter.swift in Sources */,
+				CEE31DDB2600C60E009168B4 /* OTFCloudantHKQuantitySample.swift in Sources */,
+				CEE31DEA2600C60E009168B4 /* OTFNetwork.swift in Sources */,
+				CEE31DE12600C60E009168B4 /* OTFHealthKitSynchronizer.swift in Sources */,
+				CEE31DCA2600C60E009168B4 /* Dictionary+Extension.swift in Sources */,
+				CEE31DD82600C60E009168B4 /* OTFCloudantHKCharacteristicObjects.swift in Sources */,
+				CEE31DE02600C60E009168B4 /* OTFCloudantHKClinicalRecord.swift in Sources */,
+				CEE31DD32600C60E009168B4 /* OTFCloudantHKStatistics.swift in Sources */,
+				CEE31DDA2600C60E009168B4 /* OTFCloudantHKSource.swift in Sources */,
+				CEE31DCE2600C60E009168B4 /* DataStoreName.swift in Sources */,
+				CEE31DEB2600C60E009168B4 /* OTFCloudantQueryComponent.swift in Sources */,
+				CEE31DCD2600C60E009168B4 /* CareKit+StoreManagerKey.swift in Sources */,
+				CEE31DE92600C60E009168B4 /* OTFQuery.swift in Sources */,
+				CEE31DD42600C60E009168B4 /* OTFCloudantHKCorrelation.swift in Sources */,
+				CEE31DE62600C60E009168B4 /* OTFCloudantStore+Outcomes.swift in Sources */,
+				CEE31DE82600C60E009168B4 /* OTFCloudantStore.swift in Sources */,
+				CEE31DCF2600C60E009168B4 /* OTFCloudantORKResult.swift in Sources */,
+				CEE31DC42600C60E009168B4 /* DecodingError+Extension.swift in Sources */,
+				CEE31DC72600C60E009168B4 /* CloudantEncoder.swift in Sources */,
+				CEE31DE32600C60E009168B4 /* OTFCloudantStore+Contacts.swift in Sources */,
+				CEE31DD22600C60E009168B4 /* OTFCloudantHKDocumentSample.swift in Sources */,
+				CEE31DED2600C60E009168B4 /* StoreService.swift in Sources */,
+				CEE31DE22600C60E009168B4 /* OTFCloudantStore+Tasks.swift in Sources */,
+				CEE31DCB2600C60E009168B4 /* Codable+Extension.swift in Sources */,
+				CEE31DDF2600C60E009168B4 /* OTFCloudantHKAudiogramSample.swift in Sources */,
+				CEE31DD52600C60E009168B4 /* OTFParsingHelper.swift in Sources */,
+				CEE31DC22600C60E009168B4 /* Decoder.swift in Sources */,
+				CEE31DDC2600C60E009168B4 /* OTFCloudantHKActivitySummary.swift in Sources */,
+				CEE31DEC2600C60E009168B4 /* OTFCloudantQuery.swift in Sources */,
+				CEE31DE42600C60E009168B4 /* OTFCloudantStore+CarePlans.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14AF8DE22657744E003513DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA23A0182450B1FD008BEDD7 /* OTFCloudantStore */;
+			targetProxy = 14AF8DE12657744E003513DF /* PBXContainerItemProxy */;
+		};
+		14AF8E4726577498003513DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14AF8DF826577486003513DF /* App */;
+			targetProxy = 14AF8E4626577498003513DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14AF8E0126577486003513DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14AF8E0226577486003513DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14AF8E0626577486003513DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14AF8E0726577486003513DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14AF8DE42657744E003513DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD500C0451247ED2FE804BF /* Pods-OTFCloudantStore-OTFCloudantStoreTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+			};
+			name = Debug;
+		};
+		14AF8DE52657744E003513DF /* Cloudant_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A39BBDE96F68B52864E672F /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CLOUDANT";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Cloudant_Debug;
+		};
+		14AF8DE62657744E003513DF /* Health_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE70A89DDCB225BA359A8CC3 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Health_Debug;
+		};
+		14AF8DE72657744E003513DF /* CareHealth_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A4322F3FFE539F1B44A8D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG HEALTH CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = CareHealth_Debug;
+		};
+		14AF8DE82657744E003513DF /* Care_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8073AD5C60C0830BEC24DDB9 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Care_Debug;
+		};
+		14AF8DE92657744E003513DF /* Health */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1C1AE6FEF1493CF03FD026 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.health.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = HEALTH;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Health;
+		};
+		14AF8DEA2657744E003513DF /* Cloudant */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D4817DDB43963241FEBB36 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.cloudant.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CLOUDANT;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Cloudant;
+		};
+		14AF8DEB2657744E003513DF /* CareHealth */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2665246282F941EA9F4F0A68 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.carehealth.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "HEALTH CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = CareHealth;
+		};
+		14AF8DEC2657744E003513DF /* Care */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289F6C2C2CBFD9F080ACF2D0 /* Pods-OTFCloudantStore-OTFCloudantStoreTests.care.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OTFCloudantStoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudantStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CARE;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Care;
+		};
+		14AF8E2126577487003513DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14AF8E2226577487003513DF /* Cloudant_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CLOUDANT";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Cloudant_Debug;
+		};
+		14AF8E2326577487003513DF /* Health_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG HEALTH";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Health_Debug;
+		};
+		14AF8E2426577487003513DF /* CareHealth_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG HEALTH CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = CareHealth_Debug;
+		};
+		14AF8E2526577487003513DF /* Care_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Care_Debug;
+		};
+		14AF8E2626577487003513DF /* Health */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = HEALTH;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Health;
+		};
+		14AF8E2726577487003513DF /* Cloudant */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CLOUDANT;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Cloudant;
+		};
+		14AF8E2826577487003513DF /* CareHealth */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/AppCareHealth.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "HEALTH CARE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = CareHealth;
+		};
+		14AF8E2926577487003513DF /* Care */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.HealthApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CARE;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Care;
+		};
+		14C079F9262D9D1300B1F0FD /* Care */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Care;
+		};
+		14C079FA262D9D1300B1F0FD /* Care */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D6A8FEC06FF140E6855387 /* Pods-OTFCloudantStore.care.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CARE,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CARE;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Care;
+		};
+		14C079FB262D9D2500B1F0FD /* Care_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Care_Debug;
+		};
+		14C079FC262D9D2500B1F0FD /* Care_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3F15C85203940C6AECB43C5 /* Pods-OTFCloudantStore.care_debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CARE";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Care_Debug;
+		};
+		14C079FD262D9D3400B1F0FD /* CareHealth */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = CareHealth;
+		};
+		14C079FE262D9D3400B1F0FD /* CareHealth */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B3E628DBF0C2175010B527 /* Pods-OTFCloudantStore.carehealth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "CARE HEALTH";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = CareHealth;
+		};
+		14C079FF262D9D3D00B1F0FD /* CareHealth_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = CareHealth_Debug;
+		};
+		14C07A00262D9D3D00B1F0FD /* CareHealth_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C601DC7E494497C8EFB969A0 /* Pods-OTFCloudantStore.carehealth_debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CARE HEALTH";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = CareHealth_Debug;
+		};
+		14C07A01262D9D4700B1F0FD /* Health */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Health;
+		};
+		14C07A02262D9D4700B1F0FD /* Health */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8695EE7434C7C6DB211005C4 /* Pods-OTFCloudantStore.health.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HEALTH,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = HEALTH;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Health;
+		};
+		14C07A03262D9D4C00B1F0FD /* Health_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Health_Debug;
+		};
+		14C07A04262D9D4C00B1F0FD /* Health_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E699716786F122C5FF8799 /* Pods-OTFCloudantStore.health_debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG HEALTH";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Health_Debug;
+		};
+		14DF9CDD263F994D0055B14D /* Cloudant */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Cloudant;
+		};
+		14DF9CDE263F994D0055B14D /* Cloudant */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE37BC602C85B631F4FE38FF /* Pods-OTFCloudantStore.cloudant.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CLOUDANT,
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CLOUDANT;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Cloudant;
+		};
+		14DF9CDF263F995E0055B14D /* Cloudant_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Cloudant_Debug;
+		};
+		14DF9CE0263F995E0055B14D /* Cloudant_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C8E501DA261860ECCCE1B9 /* Pods-OTFCloudantStore.cloudant_debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CLOUDANT";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Cloudant_Debug;
+		};
+		FA23A01F2450B1FD008BEDD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA23A0222450B1FD008BEDD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC92555F3AC82B63D1CDCBCD /* Pods-OTFCloudantStore.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudantStore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OCKCloudantStore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14AF8DE32657744E003513DF /* Build configuration list for PBXNativeTarget "OTFCloudantStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AF8DE42657744E003513DF /* Debug */,
+				14AF8DE52657744E003513DF /* Cloudant_Debug */,
+				14AF8DE62657744E003513DF /* Health_Debug */,
+				14AF8DE72657744E003513DF /* CareHealth_Debug */,
+				14AF8DE82657744E003513DF /* Care_Debug */,
+				14AF8DE92657744E003513DF /* Health */,
+				14AF8DEA2657744E003513DF /* Cloudant */,
+				14AF8DEB2657744E003513DF /* CareHealth */,
+				14AF8DEC2657744E003513DF /* Care */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		14AF8E2026577487003513DF /* Build configuration list for PBXNativeTarget "App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AF8E2126577487003513DF /* Debug */,
+				14AF8E2226577487003513DF /* Cloudant_Debug */,
+				14AF8E2326577487003513DF /* Health_Debug */,
+				14AF8E2426577487003513DF /* CareHealth_Debug */,
+				14AF8E2526577487003513DF /* Care_Debug */,
+				14AF8E2626577487003513DF /* Health */,
+				14AF8E2726577487003513DF /* Cloudant */,
+				14AF8E2826577487003513DF /* CareHealth */,
+				14AF8E2926577487003513DF /* Care */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FA23A0132450B1FD008BEDD7 /* Build configuration list for PBXProject "OTFCloudantStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA23A01F2450B1FD008BEDD7 /* Debug */,
+				14DF9CDF263F995E0055B14D /* Cloudant_Debug */,
+				14C07A03262D9D4C00B1F0FD /* Health_Debug */,
+				14C079FF262D9D3D00B1F0FD /* CareHealth_Debug */,
+				14C079FB262D9D2500B1F0FD /* Care_Debug */,
+				14C07A01262D9D4700B1F0FD /* Health */,
+				14DF9CDD263F994D0055B14D /* Cloudant */,
+				14C079FD262D9D3400B1F0FD /* CareHealth */,
+				14C079F9262D9D1300B1F0FD /* Care */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FA23A0212450B1FD008BEDD7 /* Build configuration list for PBXNativeTarget "OTFCloudantStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA23A0222450B1FD008BEDD7 /* Debug */,
+				14DF9CE0263F995E0055B14D /* Cloudant_Debug */,
+				14C07A04262D9D4C00B1F0FD /* Health_Debug */,
+				14C07A00262D9D3D00B1F0FD /* CareHealth_Debug */,
+				14C079FC262D9D2500B1F0FD /* Care_Debug */,
+				14C07A02262D9D4700B1F0FD /* Health */,
+				14DF9CDE263F994D0055B14D /* Cloudant */,
+				14C079FE262D9D3400B1F0FD /* CareHealth */,
+				14C079FA262D9D1300B1F0FD /* Care */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA23A0102450B1FD008BEDD7 /* Project object */;
+}

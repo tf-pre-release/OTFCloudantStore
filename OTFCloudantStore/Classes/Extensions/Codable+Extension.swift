@@ -60,7 +60,7 @@ public extension CDTDocumentRevision {
         additionalInfoDict = additionalInfo.toDictionary()
         if var newDict = dic.copyValue(from: additionalInfoDict) {
             if let outcome = item as? OCKOutcome {
-                if outcome.values.count > 0 {
+                if !outcome.values.isEmpty {
                     newDict["values"] = outcome.values.map { $0.updatedDictionary() }
                 }
             }
@@ -68,7 +68,7 @@ public extension CDTDocumentRevision {
         }
         return dic
     }
-    
+
     static func revision<Entity: Encodable & Identifiable & OTFCloudantRevision>(fromEntity item: Entity) -> CDTDocumentRevision where Entity.ID == String {
         let dic = CDTDocumentRevision.encodedDictionary(fromEntity: item)
         let revision = dic.toDocumentRevision(revId: item.revId)
@@ -83,7 +83,7 @@ public protocol OTFObjectCompatibleInfo: Codable {
     var id: String? { get set }
     /// A universally unique identifer for this object.
     var uuid: UUID? { get set }
-    
+
     /// The date at which the object was first persisted to the database.
     /// It will be nil for unpersisted values and objects.
     var createdDate: Date? { get set }
@@ -95,15 +95,15 @@ public protocol OTFObjectCompatibleInfo: Codable {
 
 private struct OTFAdditionalInfo: OTFObjectCompatibleInfo {
     var id: String?
-    
+
     var uuid: UUID?
-    
+
     var createdDate: Date?
-    
+
     var updatedDate: Date?
-    
+
     var type: String?
-    
+
     init(id: String?) {
         self.id = id
         uuid = UUID()
@@ -118,10 +118,10 @@ private struct OTFOutcomeCompatibleInfo: OTFObjectCompatibleInfo {
     var uuid: UUID?
     var createdDate: Date?
     var updatedDate: Date?
-    
+
     init(outcome: OCKOutcome) {
         self.id = outcome.id
-        self.uuid = outcome.uuid ?? UUID()
+        self.uuid = outcome.uuid
         self.createdDate = outcome.createdDate ?? Date()
         self.updatedDate = outcome.updatedDate ?? Date()
     }

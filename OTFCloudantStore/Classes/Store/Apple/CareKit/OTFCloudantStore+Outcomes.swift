@@ -51,7 +51,14 @@ extension OTFCloudantStore {
     open func fetchOutcomes(query: OCKOutcomeQuery = OCKOutcomeQuery(), callbackQueue: DispatchQueue = .main,
                             completion: @escaping (Result<[OCKOutcome], OCKStoreError>) -> Void) {
         let newQuery = OTFCloudantOutcomeQuery(outcomeQuery: query)
-        fetch(cloudantQuery: newQuery, callbackQueue: callbackQueue, completion: completion)
+        fetch(cloudantQuery: newQuery, callbackQueue: callbackQueue, filter: { outcome -> Bool in
+            guard let interval = query.dateInterval, let createdAt = outcome.createdDate else {
+                return true
+            }
+
+            let includeOutcome = interval.contains(createdAt)
+            return includeOutcome
+        }, completion: completion)
     }
 
     // swiftlint:disable trailing_closure
@@ -116,6 +123,6 @@ extension OTFCloudantStore {
             }
         }
     }
-    
+
 }
 #endif

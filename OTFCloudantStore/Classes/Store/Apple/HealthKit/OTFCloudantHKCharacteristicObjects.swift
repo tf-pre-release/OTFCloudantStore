@@ -37,7 +37,7 @@ import HealthKit
 
 /// This class acts as a wrapper for the HKBiologicalSex enumeration.
 public struct OTFCloudantHKBiologicalSexObject: Codable {
-    
+
     /// The biological sex.
     public var biologicalSex: Int?
 
@@ -52,7 +52,7 @@ public struct OTFCloudantHKBiologicalSexObject: Codable {
 
 /// This class acts as a wrapper for the HKBloodType enumeration.
 public struct OTFCloudantHKBloodTypeObject: Codable {
-    
+
     /// The blood type.
     public var bloodType: Int?
 
@@ -67,7 +67,7 @@ public struct OTFCloudantHKBloodTypeObject: Codable {
 
 /// This class acts as a wrapper for the HKFitzpatrick skin type enumeration.
 public struct OTFCloudantHKFitzpatrickSkinTypeObject: Codable {
-    
+
     /// The skin type.
     public var skinType: Int?
 
@@ -82,7 +82,7 @@ public struct OTFCloudantHKFitzpatrickSkinTypeObject: Codable {
 
 /// This class acts as a wrapper for the HKWheelchair use object enumeration.
 public struct OTFCloudantHKWheelchairUseObject: Codable {
-    
+
     /// The wheel chair type.
     public var wheelchairUse: Int?
 

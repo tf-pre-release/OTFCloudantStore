@@ -88,7 +88,6 @@ public struct OTFCloudantSample: OTFCloudantHKSampleProtocol {
 
     public var metadata: [String: Bool]?
 
-    // swiftlint:disable function_body_length
     /**
      - Description: Instantiates and returns a new HKsample.
      - Parameter sample: It requires an HKSample object as parameter.

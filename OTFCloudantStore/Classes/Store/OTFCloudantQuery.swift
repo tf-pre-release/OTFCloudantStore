@@ -55,28 +55,28 @@ public class OTFCloudantQuery {
     private var orderByAscending: String?
     private var orderByDescending: String?
     private var fields: [String]?
-    
+
     // Use this method to init query to get CareKit data
     public init(store: OTFCloudantStore, careKitClassName: String, fields: [String]? = nil) {
         cloudantStore = store
         dictionary["entity_type"] = careKitClassName
         self.fields = fields
     }
-    
+
     // Use this method to init query to get HealthKit data
     public init(store: OTFCloudantStore, healthKitSampleType: OTFHealthSampleType, fields: [String]? = nil) {
         cloudantStore = store
         dictionary["entity_type"] = "\(OTFCloudantSample.self)"
         dictionary["type"] = healthKitSampleType.rawValue
     }
-    
+
     public init(store: OTFCloudantStore, healthSampleType: OTFHealthSampleType, fields: [String]? = nil) {
         cloudantStore = store
         dictionary["entity_type"] = "OTFCloudantSample"
         dictionary["type"] = healthSampleType.rawValue
         self.fields = fields
     }
-    
+
     public func `where`(_ property: String, isEqualTo value: String) -> OTFCloudantQuery {
         dictionary[property] = value
         return self
@@ -188,7 +188,7 @@ public class OTFCloudantQuery {
         limitNumber = limit
         return self
     }
-    
+
     public func skip(skip: UInt) -> OTFCloudantQuery {
         self.skip = skip
         return self
@@ -235,7 +235,6 @@ public class OTFCloudantQuery {
         return self
     }
 
-    // swiftlint:disable cyclomatic_complexity vertical_parameter_alignment for_where
     /**
       - Description - This function can be used to get all the samples store in CloudantStore in the form of HKSample.
       - Parameter callbackQueue: Define on which queue you want to execute this query. Default is main.
@@ -243,15 +242,13 @@ public class OTFCloudantQuery {
      */
     public func getSamples(callbackQueue: DispatchQueue = .main,
                            completion: @escaping (Result<[HKSample], OTFCloudantError>) -> Void) {
-        if let sortDescriptors = sortDescriptors, sortDescriptors.count > 0 {
+        if let sortDescriptors = sortDescriptors, !sortDescriptors.isEmpty {
             let orders = sortDescriptors.flatMap { Array($0.values) }
             let sortFields = sortDescriptors.flatMap { Array($0.keys) }
             if let firstValue = orders.first {
-                for index in 0 ..< orders.count {
-                    if orders[index] != firstValue {
-                        completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
-                        return
-                    }
+                for order in orders where firstValue == order {
+                    completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
+                    return
                 }
             }
             let indexes = cloudantStore.dataStore.listIndexes()
@@ -261,7 +258,7 @@ public class OTFCloudantQuery {
                     tempSortFields.removeAll { fields.contains($0) }
                 }
             }
-            if tempSortFields.count > 0 {
+            if !tempSortFields.isEmpty {
                 let adj = tempSortFields.count > 1 ? "are" : "is"
                 completion(.failure(.fetchFailed(reason: "\(tempSortFields) \(adj) not indexed, the result will be empty")))
                 return
@@ -281,7 +278,7 @@ public class OTFCloudantQuery {
             }
         })
         callbackQueue.async {
-            if succeededItems.count > 0 {
+            if !succeededItems.isEmpty {
                 callbackQueue.async {
                     completion(.success(succeededItems.map { $0?.toHKSample() }.compactMap { $0 }))
                 }
@@ -302,16 +299,14 @@ public class OTFCloudantQuery {
       - Parameter completion: It will return a result object containing array of OTFCloudantSample and an OTFCloudantError.
      */
     public func getCloudantSamples(callbackQueue: DispatchQueue = .main,
-                                                                                   completion: @escaping (Result<[OTFCloudantSample], OTFCloudantError>) -> Void) {
-        if let sortDescriptors = sortDescriptors, sortDescriptors.count > 0 {
+                                   completion: @escaping (Result<[OTFCloudantSample], OTFCloudantError>) -> Void) {
+        if let sortDescriptors = sortDescriptors, !sortDescriptors.isEmpty {
             let orders = sortDescriptors.flatMap { Array($0.values) }
             let sortFields = sortDescriptors.flatMap { Array($0.keys) }
             if let firstValue = orders.first {
-                for index in 0 ..< orders.count {
-                    if orders[index] != firstValue {
-                        completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
-                        return
-                    }
+                for order in orders where firstValue == order {
+                    completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
+                    return
                 }
             }
             let indexes = cloudantStore.dataStore.listIndexes()
@@ -321,7 +316,7 @@ public class OTFCloudantQuery {
                     tempSortFields.removeAll { fields.contains($0) }
                 }
             }
-            if tempSortFields.count > 0 {
+            if !tempSortFields.isEmpty {
                 let adj = tempSortFields.count > 1 ? "are" : "is"
                 completion(.failure(.fetchFailed(reason: "\(tempSortFields) \(adj) not indexed, the result will be empty")))
                 return
@@ -341,7 +336,7 @@ public class OTFCloudantQuery {
             }
         })
         callbackQueue.async {
-            if succeededItems.count > 0 {
+            if !succeededItems.isEmpty {
                 callbackQueue.async {
                     completion(.success(succeededItems.compactMap { $0 }))
                 }
@@ -355,18 +350,16 @@ public class OTFCloudantQuery {
             }
         }
     }
-    
+
     public func get<Entity: Codable & Identifiable & OTFCloudantRevision>(callbackQueue: DispatchQueue = .main,
-                                                                                   completion: @escaping (Result<[Entity], OTFCloudantError>) -> Void) {
-        if let sortDescriptors = sortDescriptors, sortDescriptors.count > 0 {
+                                                                          completion: @escaping (Result<[Entity], OTFCloudantError>) -> Void) {
+        if let sortDescriptors = sortDescriptors, !sortDescriptors.isEmpty {
             let orders = sortDescriptors.flatMap { Array($0.values) }
             let sortFields = sortDescriptors.flatMap { Array($0.keys) }
             if let firstValue = orders.first {
-                for index in 0 ..< orders.count {
-                    if orders[index] != firstValue {
-                        completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
-                        return
-                    }
+                for order in orders where firstValue == order {
+                    completion(.failure(.fetchFailed(reason: "All the sort fields should be in the same order")))
+                    return
                 }
             }
             let indexes = cloudantStore.dataStore.listIndexes()
@@ -376,7 +369,7 @@ public class OTFCloudantQuery {
                     tempSortFields.removeAll { fields.contains($0) }
                 }
             }
-            if tempSortFields.count > 0 {
+            if !tempSortFields.isEmpty {
                 let adj = tempSortFields.count > 1 ? "are" : "is"
                 completion(.failure(.fetchFailed(reason: "\(tempSortFields) \(adj) not indexed, the result will be empty")))
                 return
@@ -396,7 +389,7 @@ public class OTFCloudantQuery {
             }
         })
         callbackQueue.async {
-            if succeededItems.count > 0 {
+            if !succeededItems.isEmpty {
                 callbackQueue.async {
                     completion(.success(succeededItems))
                 }

@@ -39,34 +39,34 @@ import HealthKit
  An object that contains the move, exercise, and stand data for a given day.
  */
 public struct OTFCloudantHKActivitySummary: Codable, OTFCloudantRevision, Identifiable {
-    
+
     /// The unique identifier of the sample.
     public var id: String?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// Constants that specify the value measured by the Move ring on the user’s device.
     public var activityMoveMode: Int?
-    
+
     /// The amount of active energy that the user has burned during the specified day.
     public var activeEnergyBurned: OTFCloudantHKQuantity?
-    
+
     /// The amount of time that the user has spent performing activities that involve full-body movements during the specified day.
     public var appleMoveTime: OTFCloudantHKQuantity?
-    
+
     /// The amount of time that the user has spent exercising during the specified day.
     public var appleExerciseTime: OTFCloudantHKQuantity?
-    
+
     /// The number hours in the specified day during which the user has stood and moved for at least a minute per hour.
     public var appleStandHours: OTFCloudantHKQuantity?
-    
+
     /// The user’s daily goal for active energy burned.
     public var activeEnergyBurnedGoal: OTFCloudantHKQuantity?
-    
+
     /// The user’s daily goal for move time.
     public var appleMoveTimeGoal: OTFCloudantHKQuantity?
-    
+
     /// The user’s daily exercise goal.
     public var appleExerciseTimeGoal: OTFCloudantHKQuantity?
 
@@ -119,10 +119,10 @@ extension HKQuantity {
     public static func defaultValue() -> HKQuantity {
         return HKQuantity(unit: HKUnit(from: ""), doubleValue: 0)
     }
-    
+
 }
 
 public class OTFCloudantHKActivitySummaryType: OTFCloudantHKObjectType {
-    
+
 }
 #endif

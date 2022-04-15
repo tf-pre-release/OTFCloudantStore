@@ -39,16 +39,16 @@ import HealthKit
  An object that represents the result of calculating the minimum, maximum, average, or sum over a set of samples from the HealthKit store.
  */
 public struct OTFCloudantHKStatistics: Codable {
-    
+
     /// The quantity type of the samples used to calculate these statistics.
     public var quantityType: OTFCloudantHKQuantityType?
-    
+
     /// The start of the time period included in these statistics.
     public var startDate: Date?
-    
+
     /// The end of the time period included in these statistics.
     public var endDate: Date?
-    
+
     /// An array containing all the sources contributing to these statistics.
     public var sources: [OTFCloudantHKSource]?
 

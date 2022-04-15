@@ -38,7 +38,7 @@ import OTFCareKitStore
 
 extension OCKTask: Identifiable {
     public var id: String {
-        return (uuid ?? UUID()).uuidString
+        return uuid.uuidString
     }
 }
 
@@ -61,7 +61,6 @@ extension OTFCloudantStore {
         fetch(cloudantQuery: cloudantQuery, callbackQueue: callbackQueue, completion: completion)
     }
 
-    // swiftlint:disable line_length cyclomatic_complexity function_body_length large_tuple
     /**
       This method adds, upadates or deletes a task from the store.
      
@@ -70,7 +69,10 @@ extension OTFCloudantStore {
      - Parameter callbackQueue: the queue on which your app calls the completion closure. In most cases this will be the main queue.
      - Parameter completion: a callback that fires on a background thread.
      */
-    public func addUpdateOrDeleteTasks(addOrUpdate tasks: [OCKTask], delete deleteTasks: [OCKTask], callbackQueue: DispatchQueue, completion: ((Result<([OCKTask], [OCKTask], [OCKTask]), OCKStoreError>) -> Void)?) {
+    public func addUpdateOrDeleteTasks(addOrUpdate tasks: [OCKTask],
+                                       delete deleteTasks: [OCKTask],
+                                       callbackQueue: DispatchQueue,
+                                       completion: ((Result<([OCKTask], [OCKTask], [OCKTask]), OCKStoreError>) -> Void)?) {
         self.fetchTasks { (result: Result<[OCKTask], OCKStoreError>) in
             switch result {
             case .success(let existingTasks):
@@ -158,7 +160,7 @@ extension OTFCloudantStore {
             }
         })
     }
-    
+
     /**
      Updates a task asynchronously to the store.
      
@@ -179,7 +181,7 @@ extension OTFCloudantStore {
             }
         }
     }
-    
+
     /**
      Deletes a task asynchronously from the store.
      
@@ -199,7 +201,7 @@ extension OTFCloudantStore {
             }
         }
     }
-    
+
 }
 
 /**
@@ -229,6 +231,6 @@ extension OTFCloudantError {
             return .updateFailed(reason: reason)
         }
     }
-    
+
 }
 #endif

@@ -39,19 +39,19 @@ import HealthKit
  An object representing an important event during a workout.
  */
 public struct OTFCloudantHKWorkoutEvent: Codable {
-    
+
     /// The type of workout event.
     public var type: Int?
-    
+
     /// The time when the transition occurred.
     public var date: Date?
-    
+
     /// The time and duration of the event.
     public var dateInterval: DateInterval?
-    
+
     /// The metadata associated with the workout event.
     public var metadata: [String: Any]?
-    
+
     /// Types that can be used as a key for encoding and decoding.
     private enum CodingKeys: CodingKey {
         case type
@@ -109,13 +109,13 @@ public struct OTFCloudantHKWorkoutEvent: Codable {
 public struct OTFCloudantHKWorkoutBuilder: Codable {
     /// The workout’s start date and time.
     public var startDate: Date?
-    
+
     /// The workout’s end date and time.
     public var endDate: Date?
-    
+
     /// The configuration information for the workout.
     public var workoutConfiguration: OTFCloudantHKWorkoutConfiguration?
-    
+
     /// The list of events added to the workout.
     public var workoutEvents: [OTFCloudantHKWorkoutEvent]?
 
@@ -133,16 +133,16 @@ public struct OTFCloudantHKWorkoutBuilder: Codable {
  An object that contains configuration information about a workout session.
  */
 public struct OTFCloudantHKWorkoutConfiguration: Codable {
-    
+
     /// The workout session’s activity type.
     public var activityType: UInt?
-    
+
     /// The workout session’s location.
     public var locationType: Int?
-    
+
     /// The workout session’s swimming location.
     public var swimmingLocationType: Int?
-    
+
     /// The length of the lap for a workout session.
     public var lapLength: OTFCloudantHKQuantity?
 
@@ -163,31 +163,31 @@ public struct OTFCloudantHKWorkoutConfiguration: Codable {
  A sample that contains a workout’s route data.
  */
 public class OTFCloudantHKWorkoutRoute: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifiers that belong to the entities that match the workout.
     public var id: String
-    
+
     /// The UUID for the entities that match the workout.
     public var uuid: UUID?
-    
+
     /// The revision id for the entities that match the workout.
     public var revId: String?
-    
+
     /// The cloudant sample types.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The workout’s start date and time.
     public var startDate: Date
-    
+
     /// The workout’s end date and time.
     public var endDate: Date
-    
+
     /// The number of items in the series.
     public var count: Int?
-    
+
     /// The patient identifier for the workout.
     public var patientID: String
-    
+
     /**
     - Description: Instantiates and returns a new workout route for the patient.
     - Parameter sample: This function requires a HKWorkoutRoute object as parameter.

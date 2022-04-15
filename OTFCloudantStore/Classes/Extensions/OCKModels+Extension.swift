@@ -55,7 +55,7 @@ extension OCKContact: OTFCloudantRevision {
             userInfo?[revisionIDKey] = newValue
         }
     }
-    
+
     static let typeKey = "type"
     public var type: String? {
         get {
@@ -68,7 +68,7 @@ extension OCKContact: OTFCloudantRevision {
             userInfo?[OCKContact.typeKey] = newValue
         }
     }
-    
+
     public func displayName() -> String? {
         let nameFormatter = PersonNameComponentsFormatter()
         nameFormatter.style = .long

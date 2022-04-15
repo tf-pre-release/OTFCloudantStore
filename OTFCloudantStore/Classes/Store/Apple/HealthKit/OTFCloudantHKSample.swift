@@ -36,22 +36,22 @@ OF SUCH DAMAGE.
 import HealthKit
 
 public protocol OTFCloudantHKSampleProtocol: Codable, OTFCloudantRevision, Identifiable {
-    
+
     /// The unique identifier of the sample.
     var id: String { get set }
-    
+
     /// The UUID  of the sample.
     var uuid: UUID? { get set }
-    
+
     /// The revision identifier of the sample.
     var revId: String? { get set }
-    
+
     /// The patient identifier for the sample.
     var patientID: String { get set }
-    
+
     /// The sample’s start date.
     var startDate: Date { get set }
-    
+
     /// The sample’s end date.
     var endDate: Date { get set }
 
@@ -63,25 +63,25 @@ public protocol OTFCloudantHKSampleProtocol: Codable, OTFCloudantRevision, Ident
 }
 
 public struct OTFCloudantHKSample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
 
@@ -122,13 +122,13 @@ public protocol OTFHKSampleType: Codable {
 
     /// The maximum duration if the sample type has a restricted duration.
     var maximumAllowedDuration: TimeInterval? { get set }
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     var isMinimumDurationRestricted: Bool? { get set }
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     var minimumAllowedDuration: TimeInterval? { get set }
-    
+
     /// A unique string identifying the HealthKit object type.
     var identifier: String? { get set }
 
@@ -143,19 +143,19 @@ public protocol OTFHKSampleType: Codable {
  An object that identify a specific type of sample when working with the HealthKit store.
  */
 public struct OTFCloudantHKSampleType: OTFHKSampleType {
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 

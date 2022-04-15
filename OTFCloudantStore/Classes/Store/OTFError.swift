@@ -38,7 +38,7 @@ import Foundation
  Error that provides localized messages describing the error and why it occurred.
  */
 public enum OTFCloudantError: LocalizedError {
-    
+
     /// Occurs when a fetch fails.
     case fetchFailed(reason: String)
 
@@ -79,5 +79,5 @@ public enum OTFCloudantError: LocalizedError {
             return "Invalid value: \(reason)"
         }
     }
-    
+
 }

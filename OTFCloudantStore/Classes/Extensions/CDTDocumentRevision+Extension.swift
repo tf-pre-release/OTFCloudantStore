@@ -38,7 +38,7 @@ import OTFCDTDatastore
 extension CDTDocumentRevision {
     public func data<T: Decodable>(as type: T.Type) throws -> T? {
         let decoder = CloudantDecoder()
-        
+
         if let data = self.body as? [String: Any] {
             return try decoder.decode(T.self, from: data)
         }

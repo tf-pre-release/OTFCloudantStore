@@ -38,22 +38,22 @@ import OTFResearchKit
 #endif
 
 public struct OTFCloudantORKResult: Codable, OTFCloudantRevision, Identifiable {
-    
+
     /// The unique identifiers that belong to the research kit results.
     public var id: String?
-    
+
     /// The revision identifiers that belong to the research kit results.
     public var revId: String?
-    
+
     /// The research kit's start date and time.
     public var startDate: Date?
-    
+
     /// The research kit's end date and time.
     public var endDate: Date?
-    
+
     /// The user informations.
     public var userInfo: [String: Any]?
-    
+
     /// Types that can be used as a key for encoding and decoding.
     private enum CodingKeys: String, CodingKey {
         case id
@@ -74,7 +74,7 @@ public struct OTFCloudantORKResult: Codable, OTFCloudantRevision, Identifiable {
             userInfo = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
         }
     }
-    
+
     /// Encodes the research kit event with its data.
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -87,5 +87,5 @@ public struct OTFCloudantORKResult: Codable, OTFCloudantRevision, Identifiable {
             try container.encode(jsonData, forKey: .userInfo)
         }
     }
-    
+
 }

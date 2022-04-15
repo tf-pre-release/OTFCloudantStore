@@ -37,15 +37,15 @@ import HealthKit
 
 public class OTFCloudantHKObject: Identifiable, OTFCloudantRevision, Codable {
     public var revId: String?
-    
+
     public init() {
-        
+
     }
 }
 
 public class OTFCloudantHKObjectType: Codable, Identifiable {
     public init() {
-        
+
     }
 }
 #endif

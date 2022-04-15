@@ -45,9 +45,9 @@ public class OTFNetwork {
     public static var shared = OTFNetwork()
     private var baseURL = ""
     private let session = URLSession.shared
-    
+
     private init() {}
-    
+
     public func setBaseUrl(baseURL: String) {
         self.baseURL = baseURL
     }
@@ -120,17 +120,17 @@ public class OTFNetwork {
             }
         }
     }
-    
+
     public func buildQueryString(fromDictionary parameters: [String: String]) -> String {
         var urlVars: [String] = []
         for (key, value) in parameters {
             let encodedValue = value.addPercentEncoding()
             urlVars.append(key + "=" + encodedValue)
         }
-        
+
         return urlVars.isEmpty ? "" : "?" + urlVars.joined(separator: "&")
     }
-    
+
 }
 
 extension URLRequest {

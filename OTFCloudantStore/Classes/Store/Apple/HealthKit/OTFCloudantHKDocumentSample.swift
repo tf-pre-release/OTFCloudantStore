@@ -39,28 +39,28 @@ import HealthKit
  An abstract class that represents a health document.
  */
 public struct OTFCloudantHKDocumentSample: OTFCloudantHKSampleProtocol {
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// The type of document represented by the sample.
     public var documentType: OTFCloudantHKDocumentType?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
 
@@ -98,19 +98,19 @@ public struct OTFCloudantHKDocumentSample: OTFCloudantHKSampleProtocol {
  An object that identify a specific type of sample when working with the HealthKit store.
  */
 public struct OTFCloudantHKDocumentType: OTFHKSampleType {
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 
@@ -138,31 +138,31 @@ public struct OTFCloudantHKDocumentType: OTFHKSampleType {
  A Clinical Document Architecture (CDA) sample that stores a single document.
  */
 public struct OTFCloudantHKCDADocumentSample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The document represented by the sample.
     public var document: OTFCloudantHKCDADocument?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// The type of document represented by the sample.
     public var documentType: OTFCloudantHKDocumentType?
 
@@ -197,19 +197,19 @@ public struct OTFCloudantHKCDADocumentSample: OTFCloudantHKSampleProtocol {
  An object representing a Clinical Document Architecture (CDA) document in HealthKit.
  */
 public struct OTFCloudantHKCDADocument: Codable {
-    
+
     /// The CDA document stored as XML data.
     public var documentData: Data?
-    
+
     /// The document’s title.
     public var title: String?
-    
+
     /// The patient’s name.
     public var patientName: String?
-    
+
     /// The document’s author.
     public var authorName: String?
-    
+
     /// The name of the organization responsible for the document.
     public var custodianName: String?
     /**
@@ -223,6 +223,6 @@ public struct OTFCloudantHKCDADocument: Codable {
         authorName = document.authorName
         custodianName = document.custodianName
     }
-    
+
 }
 #endif

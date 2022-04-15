@@ -168,6 +168,7 @@ extension OTFCloudantStore: OCKStoreProtocol, OCKAnyTaskStore {
     // Maybe use this so that we have only one database?
     open func fetch<Entity: Codable & Identifiable & OTFCloudantRevision>(cloudantQuery: OTFQueryProtocol,
                                                                           callbackQueue: DispatchQueue = .main,
+                                                                          filter: ((Entity) -> Bool)? = nil,
                                                                           completion: OCKResultClosure<[Entity]>? = nil)
         where Entity.ID == String {
             var query = cloudantQuery.parameters
@@ -183,6 +184,10 @@ extension OTFCloudantStore: OCKStoreProtocol, OCKAnyTaskStore {
             result?.enumerateObjects({ (revision: CDTDocumentRevision, offset: UInt, pointer: UnsafeMutablePointer<ObjCBool>) in
                 do {
                     if var item = try revision.data(as: Entity.self) {
+                        if let filterClosure = filter, filterClosure(item) == false {
+                            return
+                        }
+                        
                         item.revId = revision.revId
                         succeededItems.append(item)
                     }

@@ -41,34 +41,34 @@ import HealthKit
  A sample that stores a clinical record.
  */
 public struct OTFCloudantHKClinicalRecord: OTFCloudantHKSampleProtocol {
-   
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// An identifier that indicates the type of record, such as an allergic reaction, a lab result, or a medical procedure.
     public var clinicalType: OTFCloudantHKClinicalType?
-    
+
     /// The primary display name as shown in the Health app.
     public var displayName: String?
-    
+
     /// The Fast Healthcare Interoperability Resources (FHIR) data for this record.
     public var fhirResource: OTFCloudantHKFHIRResource?
 
@@ -109,19 +109,19 @@ public struct OTFCloudantHKClinicalRecord: OTFCloudantHKSampleProtocol {
 }
 
 public struct OTFCloudantHKClinicalType: OTFHKSampleType {
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 
@@ -152,19 +152,19 @@ public struct OTFCloudantHKClinicalType: OTFHKSampleType {
  An object containing Fast Healthcare Interoperability Resources (FHIR) data.
  */
 public struct OTFCloudantHKFHIRResource: Codable {
-    
+
     /// The Fast Healthcare Interoperability Resources (FHIR) data for this record.
     public var fhirVersion: OTFCloudantHKFHIRVersion?
-    
+
     /// The value from the FHIR resource’s resourceType field.
     public var resourceType: String?
-    
+
     /// The value from the FHIR resource’s id field.
     public var identifier: String?
-    
+
     /// The JSON representation of the FHIR resource.
     public var data: Data?
-    
+
     /// The full URL for the source of the FHIR resource.
     public var sourceURL: URL?
 
@@ -186,16 +186,16 @@ public struct OTFCloudantHKFHIRResource: Codable {
  The FHIR version.
  */
 public struct OTFCloudantHKFHIRVersion: Codable {
-    
+
     /// The standard’s major version number.
     public var majorVersion: Int?
-    
+
     /// The standard’s minor version number.
     public var minorVersion: Int?
-    
+
     /// The standard’s patch version number.
     public var patchVersion: Int?
-    
+
     /// A string representation of the version.
     public var stringRepresentation: String?
 

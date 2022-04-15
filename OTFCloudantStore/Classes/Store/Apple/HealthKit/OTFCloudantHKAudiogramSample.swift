@@ -39,28 +39,28 @@ import HealthKit
  A sample that stores an audiogram.
  */
 public struct OTFCloudantHKAudiogramSample: OTFCloudantHKSampleProtocol {
-   
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// An array of sensitivity point objects.
     public var sensitivityPoints: [OTFCloudantHKAudiogramSensitivityPoint]?
 
@@ -93,19 +93,19 @@ public struct OTFCloudantHKAudiogramSample: OTFCloudantHKSampleProtocol {
  A sample types that stores an audiogram.
  */
 public struct OTFCloudantHKAudiogramSampleType: OTFHKSampleType {
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 
@@ -142,13 +142,13 @@ public struct OTFCloudantHKAudiogramSampleType: OTFHKSampleType {
  A hearing sensitivity reading associated with a hearing test.
  */
 public struct OTFCloudantHKAudiogramSensitivityPoint: Codable {
-    
+
     /// The frequency tested in the hearing test.
     public var frequency: OTFCloudantHKQuantity?
-    
+
     /// The sensitivity of the left ear.
     public var leftEarSensitivity: OTFCloudantHKQuantity?
-    
+
     /// The sensitivity of the right ear.
     public var rightEarSensitivity: OTFCloudantHKQuantity?
 
@@ -175,6 +175,6 @@ public struct OTFCloudantHKAudiogramSensitivityPoint: Codable {
         let audigram = try? HKAudiogramSensitivityPoint(frequency: frequency?.toHKQuantity() ?? .defaultValue(), leftEarSensitivity: leftEarSensitivity?.toHKQuantity(), rightEarSensitivity: rightEarSensitivity?.toHKQuantity())
         return audigram
     }
-    
+
 }
 #endif

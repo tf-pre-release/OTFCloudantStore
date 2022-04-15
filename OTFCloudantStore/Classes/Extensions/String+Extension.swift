@@ -38,7 +38,7 @@ extension String {
     func addPercentEncoding() -> String {
         return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
-    
+
     func randomString(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return String((0..<length).map { _ in letters.randomElement()! })

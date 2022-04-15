@@ -39,31 +39,31 @@ import HealthKit
  A sample that groups multiple related samples into a single entry.
  */
 public struct OTFCloudantHKCorrelation: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifiers for the sample.
     public var id: String
-    
+
     /// The UUID for the sample.
     public var uuid: UUID?
-    
+
     /// The revision id for the sample.
     public var revId: String?
-    
+
     /// The cloudant sample types.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The start date for the sample.
     public var startDate: Date
-    
+
     /// The end date for the sample.
     public var endDate: Date
-    
+
     /// The type for this correlation.
     public var correlationType: OTFCloudantHKCorrelationType?
-    
+
     /// A set of HKSample objects. 
     public var objects: [OTFCloudantHKSample]?
-    
+
     /// The patient identifier for the workout.
     public var patientID: String
 
@@ -92,26 +92,26 @@ public struct OTFCloudantHKCorrelation: OTFCloudantHKSampleProtocol {
         let correlation = HKCorrelation(type: type, start: startDate, end: endDate, objects: Set(objects?.map { $0.toHKSample() }.compactMap { $0 } ?? [] ))
         return correlation
     }
-    
+
 }
 
 /**
  A type that identifies samples that group multiple subsamples.
  */
 public struct OTFCloudantHKCorrelationType: OTFHKSampleType {
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 
@@ -134,6 +134,6 @@ public struct OTFCloudantHKCorrelationType: OTFHKSampleType {
     public func toHKSampleType() -> HKSampleType? {
         return HKObjectType.correlationType(forIdentifier: HKCorrelationTypeIdentifier(rawValue: identifier ?? ""))
     }
-    
+
 }
 #endif

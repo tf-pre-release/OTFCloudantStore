@@ -39,10 +39,10 @@ import HealthKit
  An object indicating the app or device that created a HealthKit sample
  */
 public struct OTFCloudantHKSource: Codable {
-    
+
     /// The source’s name.
     public var name: String?
-    
+
     /// The source’s bundle identifier.
     public var bundleIdentifier: String?
 

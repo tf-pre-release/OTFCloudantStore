@@ -39,13 +39,13 @@ import HealthKit
  An object that stores a value for a given unit.
  */
 public struct OTFCloudantHKQuantity: OTFCloudantRevision, Codable {
-    
+
     /// The revision identifier of the object.
     public var revId: String?
-    
+
     /// The value for the quantity.
     public var value: Double?
-    
+
     /// The unit for the quantity.
     public var unit: OTFCloudantHKUnit?
 
@@ -69,38 +69,38 @@ public struct OTFCloudantHKQuantity: OTFCloudantRevision, Codable {
         let quantity = HKQuantity(unit: unit.toHKUnit(), doubleValue: value)
         return quantity
     }
-    
+
 }
 
 /**
  A sample that represents a quantity, including the value and the units.
  */
 public struct OTFCloudantHKQuantitySample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
- 
+
     /// The quantity type for this sample.
     public var quantityType: String?
-    
+
     /// The quantity for this sample.
     public var quantity: OTFCloudantHKQuantity?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
 
@@ -135,34 +135,34 @@ public struct OTFCloudantHKQuantitySample: OTFCloudantHKSampleProtocol {
  A sample that represents a cumulative quantity.
  */
 public struct OTFCloudantHKCumulativeQuantitySample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The quantity type for this sample.
     public var quantityType: String?
-    
+
     /// The quantity for this sample.
     public var quantity: OTFCloudantHKQuantity?
-    
+
     /// Returns the sum of all the samples that match the query.
     public var sumQuantity: OTFCloudantHKQuantity?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
 
@@ -182,7 +182,7 @@ public struct OTFCloudantHKCumulativeQuantitySample: OTFCloudantHKSampleProtocol
         endDate = cumulativeQuantitySample.endDate
         patientID = patientId
     }
-    
+
     /**
      - Description: Maps the data from the Cloudant's sample into HK's sample.
      - Returns: This function will return an optional HKSample object, that could be nil also.
@@ -198,46 +198,46 @@ public struct OTFCloudantHKCumulativeQuantitySample: OTFCloudantHKSampleProtocol
  A sample that represents a discrete quantity.
  */
 public struct OTFCloudantHKDiscreteQuantitySample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// The quantity type for this sample.
     public var quantityType: String?
-    
+
     /// The quantity for this sample.
     public var quantity: OTFCloudantHKQuantity?
-    
+
     /// The minimum value contained by the sample.
     public var minimumQuantity: OTFCloudantHKQuantity?
-    
+
     /// The average of all quantities contained by the sample
     public var averageQuantity: OTFCloudantHKQuantity?
-    
+
     /// The maximum quantity contained by the sample.
     public var maximumQuantity: OTFCloudantHKQuantity?
-    
+
     /// The most recent quantity contained by the sample.
     public var mostRecentQuantity: OTFCloudantHKQuantity?
-    
+
     /// The date interval for the most recent quantity contained by the sample.
     public var mostRecentQuantityDateInterval: DateInterval?
 
@@ -271,29 +271,29 @@ public struct OTFCloudantHKDiscreteQuantitySample: OTFCloudantHKSampleProtocol {
         let sample = HKDiscreteQuantitySample(type: type, quantity: quantity?.toHKQuantity() ?? .defaultValue(), start: startDate, end: endDate)
         return sample
     }
-    
+
 }
 
 /**
  A type that identifies samples that store numerical values.
  */
 public struct OTFCloudantHKQuantityType: OTFHKSampleType {
-    
+
     /// The aggregation style for the given quantity type.
     public var aggregationStyle: Int?
-    
+
     /// A Boolean value that indicates whether samples of this type have a maximum time interval between the start and end dates.
     public var isMaximumDurationRestricted: Bool?
-    
+
     /// The maximum duration if the sample type has a restricted duration.
     public var maximumAllowedDuration: TimeInterval?
-    
+
     /// A Boolean value that indicates whether samples of this type have a minimum time interval between the start and end dates.
     public var isMinimumDurationRestricted: Bool?
-    
+
     /// The minimum duration if the sample type has a restricted duration.
     public var minimumAllowedDuration: TimeInterval?
-    
+
     /// A unique string identifying the HealthKit object type.
     public var identifier: String?
 

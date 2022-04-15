@@ -39,10 +39,10 @@ import HealthKit
  A class for managing the units of measure within HealthKit.
  */
 public class OTFCloudantHKUnit: OTFCloudantHKObject {
-    
+
     /// A string representation of the unit object.
     public var unitString: String?
-    
+
     /// A type that can be used as a key for encoding and decoding.
     private enum CodingKeys: String, CodingKey {
         case unitString
@@ -56,7 +56,7 @@ public class OTFCloudantHKUnit: OTFCloudantHKObject {
         super.init()
         unitString = unit.unitString
     }
-    
+
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
         let container = try decoder.container(keyedBy: CodingKeys.self)

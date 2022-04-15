@@ -52,7 +52,7 @@ extension OTFCloudantStore {
                             callbackQueue: DispatchQueue = .main,
                             completion: @escaping (Result<[OCKContact], OCKStoreError>) -> Void) {
         let newQuery = OTFCloudantContactQuery(contactQuery: query)
-        fetch(cloudantQuery: newQuery, callbackQueue: callbackQueue) { (result: Result<[OCKContact], OCKStoreError>) in
+        fetch(cloudantQuery: newQuery, callbackQueue: callbackQueue, completion: { (result: Result<[OCKContact], OCKStoreError>) in
             if query.sortDescriptors.isEmpty {
                 completion(result)
             } else {
@@ -90,7 +90,7 @@ extension OTFCloudantStore {
                     completion(result)
                 }
             }
-        }
+        })
     }
 
     // swiftlint:disable trailing_closure
@@ -158,6 +158,5 @@ extension OTFCloudantStore {
             }
         }
     }
-    
 }
 #endif

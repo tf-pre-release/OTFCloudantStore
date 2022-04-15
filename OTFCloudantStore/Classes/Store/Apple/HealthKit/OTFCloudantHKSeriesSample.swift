@@ -39,28 +39,28 @@ import HealthKit
  An abstract class that defines samples that contain a series of items.
  */
 public struct OTFCloudantHKSeriesSample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// The number of items in the series.
     public var count: Int?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
 
@@ -100,28 +100,28 @@ public struct OTFCloudantHKSeriesSample: OTFCloudantHKSampleProtocol {
  A sample that represents a series of heartbeats.
  */
 public struct OTFCloudantHKHeartbeatSeriesSample: OTFCloudantHKSampleProtocol {
-    
+
     /// The unique identifier of the sample.
     public var id: String
-    
+
     /// The UUID  of the sample.
     public var uuid: UUID?
-    
+
     /// The revision identifier of the sample.
     public var revId: String?
-    
+
     /// The sample type.
     public var sampleType: OTFCloudantHKSampleType?
-    
+
     /// The sample’s start date.
     public var startDate: Date
-    
+
     /// The sample’s end date.
     public var endDate: Date
-    
+
     /// The number of items in the series.
     public var count: Int?
-    
+
     /// The patient identifier for the sample.
     public var patientID: String
 

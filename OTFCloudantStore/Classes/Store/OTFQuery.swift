@@ -40,16 +40,16 @@ import OTFCareKitStore
  A query that limits which tasks your fetch returns.
  */
 public protocol OTFQueryProtocol {
-    
+
     /// The maximum number of results the query returns.
     var limit: Int? { get set }
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     var offset: Int? { get set }
-    
+
     /// The order in which you want to sort the query results.
     var sortDescription: [[String: String]]? { get set }
-    
+
     var parameters: [String: Any] { get set }
 }
 
@@ -57,7 +57,7 @@ public protocol OTFQueryProtocol {
  Extends OTFQueryProtocol to perform the map functionality.
  */
 extension OTFQueryProtocol {
-    
+
     /**
      Maps the array of the values to the query parameter.
      
@@ -74,53 +74,53 @@ extension OTFQueryProtocol {
             return stringArray.first
         }
     }
-    
+
 }
 
 /**
  Set of property keys.
  */
 struct PropertyKey {
-    
+
     /// The unique identifiers that belong to the entities that match the query.
     static let id = "id"
-    
+
     /// The UUID for the entities that match the query.
     static let uuid = "uuid"
-    
+
     /// UUID of the care plan.
     static let carePlanUUID = "carePlanUUID"
-    
+
     /// Care plan remote identifier you can use to match tasks in the query-returned results.
     static let carePlanRemoteID = "carePlanRemoteID"
-    
+
     /// Care plan identifier you can use to match contacts in the query-returned results.
     static let carePlanID = "carePlanID"
-    
+
     /// Remote identifier for entities that match the query.
     static let remoteID = "remoteID"
-    
+
     /// Tag by which to limit the query results.
     static let tag = "tag"
-    
+
     /// Group identifers that match the query.
     static let groupIdentifier = "groupIdentifier"
-    
+
     /// The task identifier for entities that match the query.
     static let taskID = "taskID"
-    
+
     /// UUID of the tasks.
     static let taskUUID = "taskUUID"
-    
+
     /// Remote identifier for the tasks query.
     static let taskRemoteID = "taskRemoteID"
-    
+
     /// UUID of the patient.
     static let patientUUID = "patientUUID"
-    
+
     /// Remote identifier for the patient query.
     static let patientRemoteId = "patientRemoteId"
-    
+
     /// The patient identifier for entities that match the query.
     static let patientID = "patientID"
 }
@@ -129,18 +129,18 @@ struct PropertyKey {
  A query that limits which contacts the store returns, when you are fetching.
  */
 open class OTFCloudantContactQuery: OTFQueryProtocol {
-    
+
     public var parameters = [String: Any]()
-    
+
     /// The maximum number of results the query returns.
     public var limit: Int?
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     public var offset: Int?
-    
+
     /// The order in which you want to sort the query results.
     public var sortDescription: [[String: String]]?
-    
+
     /// Creates a new contact query from a specific query.
     init(contactQuery: OCKContactQuery) {
         parameters[PropertyKey.uuid] = mapArrayToQueryParameter(stringArray: contactQuery.uuids.map { $0.uuidString })
@@ -160,16 +160,16 @@ open class OTFCloudantContactQuery: OTFQueryProtocol {
  A query that limits which outcomes the store returns, when you are fetching.
  */
 open class OTFCloudantOutcomeQuery: OTFQueryProtocol {
-    
+
     /// The maximum number of results the query returns.
     public var limit: Int?
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     public var offset: Int?
-    
+
     /// The order in which you want to sort the query results.
     public var sortDescription: [[String: String]]?
-    
+
     public var parameters = [String: Any]()
 
     // swiftlint:disable trailing_closure
@@ -198,18 +198,18 @@ open class OTFCloudantOutcomeQuery: OTFQueryProtocol {
  A query that limits which patients the store returns, when you are fetching.
  */
 open class OTFCloudantPatientQuery: OTFQueryProtocol {
-    
+
     /// The maximum number of results the query returns.
     public var limit: Int?
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     public var offset: Int?
-    
+
     /// The order in which you want to sort the query results.
     public var sortDescription: [[String: String]]?
-    
+
     public var parameters = [String: Any]()
-    
+
     /// Creates an patient query with a specific query.
     init(patientQuery: OCKPatientQuery) {
         parameters[PropertyKey.uuid] = mapArrayToQueryParameter(stringArray: patientQuery.uuids.map { $0.uuidString })
@@ -226,16 +226,16 @@ open class OTFCloudantPatientQuery: OTFQueryProtocol {
  A query that limits which tasks the store returns, when you are fetching.
  */
 open class OTFCloudantTaskQuery: OTFQueryProtocol {
-    
+
     /// The maximum number of results the query returns.
     public var limit: Int?
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     public var offset: Int?
-    
+
     /// The order in which you want to sort the query results.
     public var sortDescription: [[String: String]]?
-    
+
     public var parameters = [String: Any]()
 
     // swiftlint:disable opening_brace
@@ -258,18 +258,18 @@ open class OTFCloudantTaskQuery: OTFQueryProtocol {
  A query that limits which care plans the store returns, when you are fetching.
  */
 open class OTFCloudantCarePlanQuery: OTFQueryProtocol {
-    
+
     /// The maximum number of results the query returns.
     public var limit: Int?
-    
+
     /// An integer value that indicates how much to offset the query results, and which can be used to paginate results.
     public var offset: Int?
-    
+
     /// The order in which you want to sort the query results.
     public var sortDescription: [[String: String]]?
-    
+
     public var parameters = [String: Any]()
-    
+
     /// Creates the care plan with a specific query.
     init(carePlanQuery: OCKCarePlanQuery) {
         parameters[PropertyKey.uuid] = mapArrayToQueryParameter(stringArray: carePlanQuery.uuids.map { $0.uuidString })
@@ -282,7 +282,7 @@ open class OTFCloudantCarePlanQuery: OTFQueryProtocol {
         parameters[PropertyKey.tag] = mapArrayToQueryParameter(stringArray: carePlanQuery.tags)
         limit = carePlanQuery.limit
         offset = carePlanQuery.offset
-        if carePlanQuery.sortDescriptors.count > 0 {
+        if !carePlanQuery.sortDescriptors.isEmpty {
             sortDescription = [[String: String]]()
             for sortDescriptor in carePlanQuery.sortDescriptors {
                 switch sortDescriptor {

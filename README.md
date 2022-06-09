@@ -142,7 +142,7 @@ Example
     let firstCombinedQuery = OTFCloudantCombinationQueryComponent.combinedQueryComponent(leftComponent: leftComponentFirstQuery, combinationSelector: .and, rightComponent: rightComponentFirstQuery)
     let leftComponentSecondQuery = OTFCloudantQueryComponent.simpleComponent(field: “title”, comparisionOperator: .equal, value: “Test”)
     let rightComponentSecondQuery = OTFCloudantQueryComponent.simpleComponent(field: “age”, comparisionOperator: .lessThan, value: 30)
-    let secondCombinedQuery = OTFCloudantCombinationQueryComponent.combinedQueryComponent(leftComponent: leftComponentSecondQuery, combinationSelector: .or, rightComponent: rightComponentSecondQuery)
+    let secondCombinedQuery = OTFCloudantCombinationQueryComponent.combinedQueryComponent(leftComponent: leftComponentSecondQuery, combinationSelector: .and, rightComponent: rightComponentSecondQuery)
     let complexQuery = OTFCloudantComplexQueryComponent.complexQueryComponent(leftComponent: leftComponentSecondQuery, combinationSelector: .or, rightComponent: rightComponentSecondQuery)
 ```
 `leftComponent`: OTFCloudantCombinationQueryComponent which is created by combining 2 OTFCloudantQueryComponents.

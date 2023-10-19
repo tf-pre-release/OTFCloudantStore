@@ -35,6 +35,7 @@ OF SUCH DAMAGE.
 import OTFCloudantStore
 import OTFCDTDatastore
 import OTFCloudClientAPI
+import OTFUtilities
 
 // swiftlint:disable all
 class CloudantSync: NSObject {
@@ -147,16 +148,16 @@ class CloudantSync: NSObject {
         case .push:
             dataStore.push(to: configuration.targetURL, replicator: replicator, username: configuration.username, password: configuration.password) { (error: Error?) in
                 if let error = error {
-                    print(error)
+                    OTFError("Error: %{public}@", error.localizedDescription)
                     completionBlock?(error)
                 } else {
-                    print("PUSH SUCCEEDED")
+                    OTFLog("PUSH SUCCEEDED", "")
                     completionBlock?(nil)
                 }
             }
         case .pull:
             dataStore.pull(from: configuration.targetURL, replicator: replicator, username: configuration.username, password: configuration.password) { error in
-                print("Pull Error -",error)
+                OTFError("Pull Error: %{public}@", error?.localizedDescription ?? "")
                 completionBlock?(error)
             }
         }
